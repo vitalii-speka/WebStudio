@@ -1,0 +1,138 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header a {
+    color: $primary-text-color;
+    background: $bg-color;
+}
+
+.page-header {
+    position: fixed;
+    width: 100%;
+    min-height: 80px;
+    z-index: 2;
+    background-color: $bg-color;
+
+    border: 1px solid #ececec;
+}
+
+.main-nav-container,
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav,
+.auth-nav {
+    display: flex;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.site-nav {
+    margin-left: 85px;
+
+    & .item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    & .link {
+        position: relative;
+
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    & .link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: $border-radius-2;
+
+        opacity: 0;
+        transform: scaleX(0);
+        transition: transform $hover-animation;
+    }
+
+    & .link:hover:after,
+    & .link:focus:after {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    & .link:hover,
+    & .link:focus {
+        color: $accent-color;
+    }
+
+    & .link.current {
+        position: relative;
+        display: block;
+
+        color: $accent-color;
+    }
+
+    & .link.current::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: $border-radius-2;
+    }
+
+}
+
+.address-contact {
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-nav {
+    & .link {
+        color: $title-text-color;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        transform: scale(1);
+        transition: $hover-animation;
+    }
+}
+
+.auth-nav .item+.item {
+    margin-left: 30px;
+}
+
+.link .contact-icon {
+    margin-right: 10px;
+}
+
+.item .link:hover,
+.item .link:focus {
+    color: $accent-color;
+    --color5: currentColor;
+
+    transform: scale(1.05);
+}

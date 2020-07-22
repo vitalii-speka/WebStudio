@@ -1,0 +1,153 @@
+.footer {
+    background: #2f303a;
+    color: rgba(255, 255, 255, 0.4);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-info {
+    display: flex;
+    align-items: baseline;
+}
+
+.box-1 {
+    margin-right: 69px;
+
+    & .address-list {
+        width: 231px;
+    }
+
+    & .logo {
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
+
+.box-2 {
+    margin-right: 94px;
+
+    & .list {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+.list .list-social:not(:last-child) {
+    margin-right: 10px;
+}
+
+.list-social {
+
+    & .link-social {
+        @include FlexCentr();
+        color: #afb1b8;
+
+        cursor: pointer;
+        height: 44px;
+        width: 44px;
+
+        transform: translate3d(0px, 0px, 0px);
+        transition: transform $hover-animation;
+    }
+
+    & .link-social:hover,
+    & .link-social:focus,
+    & .link-social.footer-svg:hover,
+    & .link-shiddenocial.footer-svg:focus {
+        color: #ffffff;
+        background-color: $accent-color;
+        border-radius: $border-radius-50;
+        transform: translate3d(3px, 3px, 3px);
+
+    }
+}
+
+@keyframes animation-scale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.25);
+    }
+}
+
+.link-social {
+    & .icon {
+        height: 44px;
+        width: 44px;
+        --color3: currentColor;
+    }
+
+    & .icon.footer-svg {
+        --color3: currentColor;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+    }
+}
+
+.address-list {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+
+    & .text {
+        color: $bg-color;
+        margin-bottom: 9px;
+    }
+
+    & .link {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    & .e-mail {
+        margin-bottom: 9px;
+    }
+
+    & .telefone {
+        margin-bottom: 0;
+    }
+}
+
+.footer-text {
+    color: $bg-color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.box-3 .blok-bootom {
+    display: flex;
+    margin-top: 20px;
+}
+
+.copirite {
+    @include text-style($title-text-color, 12px, 2);
+    font-weight: $font-weight-400;
+    text-align: center;
+    margin: 0;
+    padding-top: 18px;
+    padding-bottom: 21px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.email-input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background: #2f303a;
+    width: 358px;
+    height: 50px;
+    margin-right: 18px;
+    padding: 15px 16px;
+}

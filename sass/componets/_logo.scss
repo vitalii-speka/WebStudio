@@ -1,0 +1,16 @@
+.logo {
+    display: block;
+
+    @include text-style($accent-color, 26px, 1.19);
+    font-weight: 700;
+
+    & .text {
+        color: $primary-text-color;
+        font-family: $font-family-Raleway;
+
+    }
+
+    & .text.second {
+        color: $bg-color;
+    }
+}

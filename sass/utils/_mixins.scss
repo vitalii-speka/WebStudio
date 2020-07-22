@@ -1,0 +1,17 @@
+@mixin text-style($color, $size, $height) {
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+
+    font-style: normal;
+}
+
+// @mixin border($size, $type: solid, $color) {
+//     border: $size $type $color;
+// }
+
+@mixin FlexCentr() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

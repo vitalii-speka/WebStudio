@@ -1,0 +1,60 @@
+.clients {
+    display: flex;
+    text-align: center;
+
+    & .clients-li:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    & .clients-li {
+        width: calc((100% - 30px * 5) / 6);
+    }
+}
+
+.clients-card {
+    @include FlexCentr();
+    cursor: pointer;
+
+    height: 90px;
+    width: 170px;
+
+    border-radius: 4px;
+    background-position: center;
+    margin-bottom: 30px;
+
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform $hover-animation;
+}
+
+.clients-li .clients-card:hover,
+.clients-li .clients-card:active {
+    --color3: currentColor;
+    color: $accent-color;
+
+    border: 1px solid $accent-color;
+    transform: translate3d(5px, 5px, 5px);
+}
+
+@keyframes animation-scale {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.clients-4 .icon {
+    width: 80px;
+}
+
+.clients-6 .icon {
+    width: 89px;
+}

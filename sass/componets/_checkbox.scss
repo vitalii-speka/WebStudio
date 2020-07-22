@@ -1,0 +1,37 @@
+/* добавил checkbox*/
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-fieled {
+    text-align: start;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+
+    transition: transform $hover-animation;
+}
+
+.checkbox:checked+.checkbox-icon {
+    transform: scale(1.2);
+    fill: $bg-color;
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url("../images/full-check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    cursor: pointer;
+}

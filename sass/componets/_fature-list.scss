@@ -1,0 +1,43 @@
+.fature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .title {
+        @include text-style($primary-text-color, 14px, 1.14);
+        text-transform: uppercase;
+        font-weight: $font-weight-700;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    & .text {
+        @include text-style($primary-text-color, 14px, 1.71);
+        color: $title-text-color;
+        font-weight: $font-weight-400;
+        margin: 0;
+    }
+
+    & .item {
+        width: calc((100% - 30px * 3) / 4);
+    }
+}
+
+.icon-fature {
+    & .blok {
+        @include FlexCentr();
+
+        width: 270px;
+        height: 120px;
+        background-color: #f5f4fa;
+        border-radius: 4px;
+        background-position: center;
+        margin-bottom: 30px;
+    }
+
+    & .icon {
+        width: 70px;
+        height: 70px;
+    }
+
+}
