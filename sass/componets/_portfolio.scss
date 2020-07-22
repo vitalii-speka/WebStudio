@@ -119,12 +119,12 @@
 
 .item.link-hover {
     transition: translate3d $hover-animation;
-    transform: translate3d(0px, 0px, 0px);
+    // transform: translate3d(0px, 0px, 0px);
 }
 
 .item.link-hover:hover,
 .item.link-hover:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
         0px 1px 1px rgba(0, 0, 0, 0.12);
-    transform: translate3d(3px, 3px, 3px);
+    // transform: translate3d(3px, 3px, 3px);
 }
