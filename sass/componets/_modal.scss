@@ -33,7 +33,7 @@
     text-align: center;
     transform: translate(-50%, -50%) scale(1);
 
-    transition: transform $hover-animation, scale var(--hover-animation);
+    transition: transform $hover-animation, scale $hover-animation;
 }
 
 .backdroup.is-hidden {
@@ -84,6 +84,11 @@
     &:focus-within>.icon {
         fill: $accent-color;
     }
+}
+
+.foorm-field.checkbox-fieled {
+    display: flex;
+    align-items: center;
 }
 
 .foorm-label {
