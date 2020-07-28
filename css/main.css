@@ -321,26 +321,64 @@ header a {
   border: 1px solid #ececec;
 }
 
-.main-nav-container,
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 480px) {
+  .main-nav-container,
+  .main-nav {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav-container,
+  .main-nav {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-nav-container,
+  .main-nav {
+    width: 1200px;
+  }
 }
 
 .site-nav,
 .auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 480px) {
+  .site-nav,
+  .auth-nav {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav,
+  .auth-nav {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav,
+  .auth-nav {
+    width: 1200px;
+  }
 }
 
 .site-nav {

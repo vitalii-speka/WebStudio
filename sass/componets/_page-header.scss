@@ -33,19 +33,46 @@ header a {
 
 .main-nav-container,
 .main-nav {
-    display: flex;
-    align-items: center;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
+
 }
 
 .site-nav,
 .auth-nav {
-    display: flex;
 
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+
+        display: flex;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 
 .site-nav {
