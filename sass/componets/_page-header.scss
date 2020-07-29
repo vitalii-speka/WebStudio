@@ -14,6 +14,31 @@
     @media screen and (min-width: $desktop) {
         width: $desktop;
     }
+
+    &.header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: $tablet) {
+            height: 60px;
+            padding-top: 10px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            position: static;
+            height: 80px;
+            padding-top: 21px;
+            padding-bottom: 21px;
+            text-align: center;
+        }
+    }
+
 }
 
 header a {
@@ -22,22 +47,29 @@ header a {
 }
 
 .page-header {
-    position: fixed;
+    position: relative;
     width: 100%;
-    min-height: 80px;
-    z-index: 2;
+    height: 60px;
+    z-index: 100;
     background-color: $bg-color;
 
     border: 1px solid #ececec;
 
-    .header {
-        @media screen and (min-width: $tablet) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 80px;
-        }
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
     }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+
+        margin-left: auto;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
+
 }
 
 .header-nav {
@@ -50,7 +82,6 @@ header a {
 }
 
 .header {
-
     @media screen and (min-width: $mobile) {
         width: $mobile;
     }
@@ -65,12 +96,40 @@ header a {
     @media screen and (min-width: $desktop) {
         width: $desktop;
     }
+}
 
+.header-menu {
+    @media screen and (max-width: $tablet) {
+        position: absolute;
+        z-index: 100;
+        background-color: $bg-color;
+        top: 100%;
+        left: 0;
+        right: 0;
+        transform: translate(0, -200%);
+        transition: transform $hover-animation;
+
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16),
+            0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &.is-open {
+        transform: translate(0, 0);
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .site-nav,
 .auth-nav {
-
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -102,9 +161,9 @@ header a {
     & .link {
         position: relative;
 
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        // display: block;
+        // padding-top: 32px;
+        // padding-bottom: 32px;
     }
 
     & .link::after {
@@ -154,7 +213,6 @@ header a {
         background-color: $accent-color;
         border-radius: $border-radius-2;
     }
-
 }
 
 .address-contact {
