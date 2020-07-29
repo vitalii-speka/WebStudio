@@ -1,5 +1,4 @@
 .our-team {
-    display: none;
     background-color: #f5f4fa;
 }
 
@@ -10,13 +9,16 @@
 
 
 .team-list {
-    display: flex;
-    text-align: center;
-
     font-style: normal;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        text-align: center;
+    }
+
 
     & .title {
         color: $primary-text-color;
@@ -35,12 +37,22 @@
 
     & .list {
         @include FlexCentr();
-        margin-bottom: 24px;
+        padding-bottom: 24px;
         cursor: pointer;
     }
 
     & .team-li {
-        width: calc((100% - 30px * 3) / 4);
+        width: 450px;
+
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 30px * 1) / 2);
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 30px * 3) / 4);
+        }
+
     }
 
     & .link {
@@ -67,6 +79,12 @@
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    &:not(:last-child) {
+        @media screen and (min-width: $desktop) {
+            margin-right: 30px;
+        }
     }
 }

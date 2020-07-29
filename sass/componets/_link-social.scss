@@ -1,0 +1,53 @@
+.list .list-social:not(:last-child) {
+    margin-right: 10px;
+}
+
+.list-social {
+
+    & .link-social {
+        @include FlexCentr();
+        color: #afb1b8;
+
+        cursor: pointer;
+        height: 44px;
+        width: 44px;
+
+        transition: transform $hover-animation;
+    }
+
+    & .link-social:hover,
+    & .link-social:focus,
+    & .link-social.footer-svg:hover,
+    & .link-shiddenocial.footer-svg:focus {
+        color: #ffffff;
+        background-color: $accent-color;
+        border-radius: $border-radius-50;
+    }
+}
+
+@keyframes animation-scale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.25);
+    }
+}
+
+.link-social {
+    & .icon {
+        height: 44px;
+        width: 44px;
+        --color3: currentColor;
+    }
+
+    & .icon.footer-svg {
+        --color3: currentColor;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+    }
+}
