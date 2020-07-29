@@ -9,6 +9,11 @@
         font-weight: $font-weight-700;
         margin: 0;
         margin-bottom: 10px;
+
+        @media screen and (max-width: $mobile) {
+            text-align: center;
+        }
+
     }
 
     & .text {
@@ -21,6 +26,11 @@
     & .item {
         width: 450px;
 
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
         @media screen and (min-width: $tablet) {
             width: calc((100% - 30px * 4) / 2);
         }
@@ -29,15 +39,17 @@
             width: calc((100% - 30px * 3) / 4);
         }
     }
+
+
 }
 
 .icon-fature {
     & .blok {
         @include FlexCentr();
 
-        @media screen and (max-width: $mobile) {
-            width: 270px;
-        }
+        // @media screen and (max-width: $mobile) {
+        //     width: 270px;
+        // }
 
         height: 120px;
         background-color: #f5f4fa;

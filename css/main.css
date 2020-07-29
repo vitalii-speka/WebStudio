@@ -818,6 +818,12 @@ header a {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 480px) {
+  .fature-list .title {
+    text-align: center;
+  }
+}
+
 .fature-list .text {
   color: #212121;
   font-size: 14px;
@@ -830,6 +836,10 @@ header a {
 
 .fature-list .item {
   width: 450px;
+}
+
+.fature-list .item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -859,12 +869,6 @@ header a {
   border-radius: 4px;
   background-position: center;
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 480px) {
-  .icon-fature .blok {
-    width: 270px;
-  }
 }
 
 .icon-fature .icon {
