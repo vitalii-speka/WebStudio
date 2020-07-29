@@ -1,5 +1,10 @@
+.our-clients .section-title {
+    display: none;
+}
+
 .clients {
-    display: flex;
+    display: none;
+    // display: flex;
     text-align: center;
 
     & .clients-li:not(:last-child) {

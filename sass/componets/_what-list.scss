@@ -1,34 +1,43 @@
-.what-list {
-    display: flex;
-    text-align: center;
+.section.what-doing {
+    display: none;
 
-    & .iteam-link {
-        position: relative;
+
+    @media screen and (min-width: $desktop) {
         display: block;
+
+        .what-list {
+            display: flex;
+            text-align: center;
+
+            & .iteam-link {
+                position: relative;
+                display: block;
+            }
+
+            & .title {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                color: $title-text-color;
+                background-color: rgba(47, 48, 58, 0.8);
+
+                @include text-style($bg-color, 14px, 1.14);
+                font-weight: $font-weight-700;
+                text-align: center;
+                text-transform: uppercase;
+
+                width: 100%;
+                padding: 21px 81px;
+                margin: 0;
+            }
+
+            & .what-li {
+                width: calc((100% - 30px * 2) / 3);
+            }
+
+            .what-li:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
     }
-
-    & .title {
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        color: $title-text-color;
-        background-color: rgba(47, 48, 58, 0.8);
-
-        @include text-style($bg-color, 14px, 1.14);
-        font-weight: $font-weight-700;
-        text-align: center;
-        text-transform: uppercase;
-
-        width: 100%;
-        padding: 21px 81px;
-        margin: 0;
-    }
-
-    & .what-li {
-        width: calc((100% - 30px * 2) / 3);
-    }
-}
-
-.what-li:not(:last-child) {
-    margin-right: 30px;
 }

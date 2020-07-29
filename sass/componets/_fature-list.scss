@@ -19,7 +19,15 @@
     }
 
     & .item {
-        width: calc((100% - 30px * 3) / 4);
+        width: 450px;
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 30px * 4) / 2);
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 30px * 3) / 4);
+        }
     }
 }
 
@@ -27,12 +35,17 @@
     & .blok {
         @include FlexCentr();
 
-        width: 270px;
+        @media screen and (max-width: $mobile) {
+            width: 270px;
+        }
+
         height: 120px;
         background-color: #f5f4fa;
         border-radius: 4px;
         background-position: center;
         margin-bottom: 30px;
+
+
     }
 
     & .icon {
