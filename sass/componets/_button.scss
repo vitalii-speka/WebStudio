@@ -68,3 +68,27 @@
         fill: $accent-color;
     }
 }
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+
+    & .icon-cross {
+        display: none;
+    }
+
+    &.is-open .icon-cross {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+}

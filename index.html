@@ -20,37 +20,49 @@
 <body>
   <!-- Top Line / ШАПКА -->
   <header class="page-header">
-    <div class="container main-nav-container">
-      <nav class="main-nav">
-        <a href="./index.html" class="logo">Web <span class="text"> Studio</span>
-        </a>
-        <ul class="site-nav list">
-          <li class="item">
-            <a href="./index.html" class="link current">Студия</a>
-          </li>
-          <li class="item">
-            <a href="./portfolio.html" class="link">Портфолио</a>
-          </li>
-          <li class="item"><a href="" class="link">Контакты</a></li>
-        </ul>
-      </nav>
-      <address class="address-contact">
-        <ul class="auth-nav list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="contact-icon mail" width="16" height="11">
-                <use href="./images/sprite.svg#icon-logo-email"></use>
-              </svg> info@devstudio.com</a>
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg class="contact-icon telefone" width="10" height="15">
-                <use href="./images/sprite.svg#icon-logo-telefone"></use>
-              </svg>+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
-      </address>
+    <div class="container header">
+      <a href="./index.html" class="logo">Web <span class="text"> Studio</span>
+      </a>
+
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="icon-cross" href="./images/sprite1.1.svg#cross"></use>
+          <use class="icon-menu" href="./images/sprite1.1.svg#menu"></use>
+        </svg>
+      </button>
+
+      <div data-menu class="header-menu" id="header-menu">
+        <nav class="header-nav">
+          <ul class="site-nav list">
+            <li class="item">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="link">Контакты</a></li>
+          </ul>
+          <address class="address-contact">
+            <ul class="auth-nav list">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link">
+                  <svg class="contact-icon mail" width="16" height="11">
+                    <use href="./images/sprite.svg#icon-logo-email"></use>
+                  </svg>
+                  info@devstudio.com</a>
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="link">
+                  <svg class="contact-icon telefone" width="10" height="15">
+                    <use href="./images/sprite.svg#icon-logo-telefone"></use>
+                  </svg>+38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </address>
+        </nav>
+      </div>
+
     </div>
   </header>
 
@@ -63,7 +75,9 @@
             эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="button primary" data-modal-open>Заказать усугу</button>
+          <button class="button primary" data-modal-open>
+            Заказать усугу
+          </button>
         </div>
       </section>
 
@@ -419,7 +433,8 @@
           <div class="blok-bootom">
             <input class="email-input" type="email" placeholder="E-mail" />
             <div class="test">
-              <button class="button primary">Подписаться
+              <button class="button primary">
+                Подписаться
                 <svg class="icon-send" width="24" height="24">
                   <use href="./images/sprite.svg#icon-icon-send"></use>
                 </svg>
@@ -427,7 +442,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <!-- возможно времено убрал дизайнер -->
@@ -438,12 +452,11 @@
   </footer>
   <div class="backdroup is-hidden" data-modal>
     <div class="modal">
-
       <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
 
       <form class="foorm" autocomplete="off">
         <label class="foorm-field">
-          <input class="foorm-input" type="text" name="name" placeholder=" ">
+          <input class="foorm-input" type="text" name="name" placeholder=" " />
           <span class="foorm-label">Имя</span>
           <svg class="icon">
             <use href="./images/sprite.svg#icon-icon-name"></use>
@@ -451,7 +464,7 @@
         </label>
 
         <label class="foorm-field">
-          <input class="foorm-input" type="tel" name="tel" placeholder=" ">
+          <input class="foorm-input" type="tel" name="tel" placeholder=" " />
           <span class="foorm-label">Телефон</span>
           <svg class="icon">
             <use href="./images/sprite.svg#icon-icon-telefone"></use>
@@ -459,22 +472,20 @@
         </label>
 
         <label class="foorm-field">
-          <input class="foorm-input" type="email" name="email" placeholder=" ">
+          <input class="foorm-input" type="email" name="email" placeholder=" " />
           <span class="foorm-label">Почта</span>
           <svg class="icon">
             <use href="./images/sprite.svg#icon-icon-email"></use>
           </svg>
         </label>
 
-
         <div class="foorm-field comment">
           <textarea class="foorm-input" name="comment" id="clients-comments" placeholder=" "></textarea>
           <label class="foorm-label comment" for="clients-comments">Комменатрарии</label>
         </div>
 
-
         <label class="foorm-field checkbox-fieled">
-          <input class="checkbox" name="checkbox" type="checkbox">
+          <input class="checkbox" name="checkbox" type="checkbox" />
           <span class="checkbox-icon"></span>
           <span class="agre">
             Соглашаюсь с рассылкой и принимаю
@@ -483,7 +494,6 @@
         </label>
 
         <button class="button primary">Отправить</button>
-
       </form>
 
       <button class="button-close" data-modal-close>
@@ -491,12 +501,10 @@
           <use href="./images/sprite1.1.svg#icon-icon-close"></use>
         </svg>
       </button>
-
     </div>
   </div>
   <script src="./js/modal.js"></script>
   <script src="./js/menu.js"></script>
-
 </body>
 
 </html>

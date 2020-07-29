@@ -29,10 +29,27 @@ header a {
     background-color: $bg-color;
 
     border: 1px solid #ececec;
+
+    .header {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80px;
+        }
+    }
 }
 
-.main-nav-container,
-.main-nav {
+.header-nav {
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.header {
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
@@ -71,12 +88,12 @@ header a {
     }
 
     @media screen and (min-width: $desktop) {
-        width: $desktop;
+        // width: $desktop;
     }
 }
 
 .site-nav {
-    margin-left: 85px;
+    // margin-left: 85px;
 
     & .item:not(:last-child) {
         margin-right: 50px;
@@ -142,15 +159,21 @@ header a {
 
 .address-contact {
     display: flex;
-    margin-left: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin-bottom: 60px;
+    border: none;
 }
 
 .auth-nav {
-    & .link {
+    .link {
         color: $title-text-color;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        // display: inline-flex;
+        // justify-content: center;
+        // align-items: center;
         padding-top: 32px;
         padding-bottom: 32px;
 

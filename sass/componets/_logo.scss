@@ -1,8 +1,11 @@
 .logo {
-    display: block;
 
     @include text-style($accent-color, 26px, 1.19);
     font-weight: 700;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+    }
 
     & .text {
         color: $primary-text-color;
