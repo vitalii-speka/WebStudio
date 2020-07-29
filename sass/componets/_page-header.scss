@@ -50,10 +50,10 @@ header a {
     position: relative;
     width: 100%;
     height: 60px;
-    z-index: 100;
+    z-index: 5;
     background-color: $bg-color;
 
-    border: 1px solid #ececec;
+    // border: 1px solid #ececec;
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
@@ -109,8 +109,10 @@ header a {
         transform: translate(0, -200%);
         transition: transform $hover-animation;
 
+        background: #FFFFFF;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16),
-            0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+            0px 2px 4px rgba(0, 0, 0, 0.08),
+            0px 4px 8px rgba(0, 0, 0, 0.04);
 
         padding-top: 60px;
         padding-bottom: 60px;
@@ -128,59 +130,71 @@ header a {
     }
 }
 
-.site-nav,
-.auth-nav {
-    font-style: normal;
+
+.site-nav {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.02em;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    @include text-style(currentColor, 18px, 1.16);
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-left: 50px;
+        @include text-style(currentColor, 12px, 1.16);
     }
 
     @media screen and (min-width: $tablet) {
-        width: $tablet;
-
-        display: flex;
+        margin-right: 50px;
+        @include text-style(currentColor, 14px, 1.14);
     }
 
-    @media screen and (min-width: $desktop) {
-        // width: $desktop;
-    }
-}
-
-.site-nav {
-    // margin-left: 85px;
 
     & .item:not(:last-child) {
-        margin-right: 50px;
+        @media screen and (min-width: $tablet) {
+            margin-right: 50px;
+            @include text-style(currentColor, 14px, 1.14);
+        }
+
     }
 
     & .link {
         position: relative;
 
-        // display: block;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
+        padding-top: 8px;
+
+        @media screen and (min-width: $tablet) {
+
+            display: inline-block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 
     & .link::after {
         content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
 
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: $accent-color;
-        border-radius: $border-radius-2;
+        @media screen and (min-width: $tablet) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
 
-        opacity: 0;
-        transform: scaleX(0);
-        transition: transform $hover-animation;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: $border-radius-2;
+
+            opacity: 0;
+            transform: scaleX(0);
+            transition: transform $hover-animation;
+        }
+
     }
 
     & .link:hover:after,
@@ -196,9 +210,14 @@ header a {
 
     & .link.current {
         position: relative;
-        display: block;
+        display: inline-block;
+        padding-bottom: 8px;
 
         color: $accent-color;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+        }
     }
 
     & .link.current::before {
@@ -212,8 +231,23 @@ header a {
         height: 4px;
         background-color: $accent-color;
         border-radius: $border-radius-2;
+
+        // @media screen and (min-width: $tablet) {
+        //     bottom: 0;
+        // }
+
     }
+
+
+    .item:not(:first-child) {
+        @media screen and (max-width: $tablet) {
+            margin-top: 40px;
+        }
+    }
+
+
 }
+
 
 .address-contact {
     display: flex;
@@ -226,23 +260,47 @@ header a {
     border: none;
 }
 
+
 .auth-nav {
-    .link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+        @include text-style(currentColor, 18px, 1.16);
+
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+
+        display: flex;
+        @include text-style(currentColor, 12px, 1.16);
+    }
+
+    @media screen and (min-width: $desktop) {
+        // width: $desktop;
+        @include text-style(currentColor, 14px, 1.14);
+    }
+
+    & .link {
         color: $title-text-color;
-        // display: inline-flex;
-        // justify-content: center;
-        // align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         padding-top: 32px;
         padding-bottom: 32px;
 
         transform: scale(1);
         transition: $hover-animation;
     }
+
+    & .contact-icon {
+        margin-right: 10px;
+    }
 }
 
-.auth-nav .item+.item {
-    margin-left: 30px;
-}
+
 
 .link .contact-icon {
     margin-right: 10px;

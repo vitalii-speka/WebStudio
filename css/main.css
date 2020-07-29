@@ -349,9 +349,8 @@ header a {
   position: relative;
   width: 100%;
   height: 60px;
-  z-index: 100;
+  z-index: 5;
   background-color: #ffffff;
-  border: 1px solid #ececec;
 }
 
 @media screen and (min-width: 480px) {
@@ -428,6 +427,7 @@ header a {
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: #FFFFFF;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
     padding-top: 60px;
@@ -453,57 +453,88 @@ header a {
   }
 }
 
-.site-nav,
-.auth-nav {
-  font-style: normal;
+.site-nav {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  color: currentColor;
+  font-size: 18px;
+  line-height: 1.16;
+  font-style: normal;
 }
 
-@media screen and (min-width: 480px) {
-  .site-nav,
-  .auth-nav {
-    width: 480px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 50px;
+    color: currentColor;
+    font-size: 12px;
+    line-height: 1.16;
+    font-style: normal;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav,
-  .auth-nav {
-    width: 768px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .site-nav {
+    margin-right: 50px;
+    color: currentColor;
+    font-size: 14px;
+    line-height: 1.14;
+    font-style: normal;
   }
 }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+    color: currentColor;
+    font-size: 14px;
+    line-height: 1.14;
+    font-style: normal;
+  }
 }
 
 .site-nav .link {
   position: relative;
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav .link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .site-nav .link::after {
   content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-  opacity: 0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav .link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .site-nav .link:hover:after,
@@ -520,8 +551,15 @@ header a {
 
 .site-nav .link.current {
   position: relative;
-  display: block;
+  display: inline-block;
+  padding-bottom: 8px;
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav .link.current {
+    display: block;
+  }
 }
 
 .site-nav .link.current::before {
@@ -534,6 +572,12 @@ header a {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav .item:not(:first-child) {
+    margin-top: 40px;
+  }
 }
 
 .address-contact {
@@ -555,8 +599,54 @@ header a {
   border: none;
 }
 
+.auth-nav {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 480px) {
+  .auth-nav {
+    width: 480px;
+    color: currentColor;
+    font-size: 18px;
+    line-height: 1.16;
+    font-style: normal;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: currentColor;
+    font-size: 12px;
+    line-height: 1.16;
+    font-style: normal;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    color: currentColor;
+    font-size: 14px;
+    line-height: 1.14;
+    font-style: normal;
+  }
+}
+
 .auth-nav .link {
   color: #757575;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   -webkit-transform: scale(1);
@@ -565,8 +655,8 @@ header a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav .item + .item {
-  margin-left: 30px;
+.auth-nav .contact-icon {
+  margin-right: 10px;
 }
 
 .link .contact-icon {
@@ -670,7 +760,7 @@ header a {
   background-color: transparent;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -686,6 +776,15 @@ header a {
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-button:hover, .menu-button:focus {
+  color: #2196f3;
+}
+
+.icon-cross,
+.icon-menu {
+  fill: currentColor;
 }
 
 .hero {

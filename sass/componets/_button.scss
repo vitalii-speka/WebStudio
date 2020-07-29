@@ -76,7 +76,7 @@
     border: none;
     background-color: transparent;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 
@@ -91,4 +91,14 @@
     &.is-open .icon-menu {
         display: none;
     }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.icon-cross,
+.icon-menu {
+    fill: currentColor;
 }
