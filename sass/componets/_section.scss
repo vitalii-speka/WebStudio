@@ -23,10 +23,12 @@ main {
     font-weight: $font-weight-700;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     @media screen and (min-width: $desktop) {
         @include text-style($primary-text-color, 36px, 1.16);
+        margin-bottom: 50px;
+
     }
 
 }
