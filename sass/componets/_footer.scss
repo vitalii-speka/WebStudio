@@ -10,8 +10,8 @@
         // width: $mobile;
     }
 
-    @media screen and (min-width: $tablet) {
-        width: $tablet;
+    @media screen and (max-width: $tablet) {
+        // width: $tablet;
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
@@ -19,7 +19,8 @@
     }
 
     @media screen and (min-width: $desktop) {
-        // display: flex;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -27,7 +28,7 @@
     text-align: center;
 
     @media screen and (min-width: $desktop) {
-        margin-right: 69px;
+        text-align: left;
 
         & .address-list {
             width: 231px;
@@ -44,14 +45,14 @@
 
 .box-2 {
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         min-width: 206px;
         margin-top: 60px;
     }
 
 
     @media screen and (min-width: $desktop) {
-        margin-right: 94px;
+        // margin-right: 94px;
     }
 
     & .list {
@@ -97,18 +98,23 @@
 
     text-align: center;
 
-    @media screen and (min-width: $desktop) {}
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .box-3 {
-    margin-top: 60px;
+    @media screen and (max-width: $tablet) {
+        margin-top: 60px;
+    }
+
 
     .blok-bootom {
         padding-top: 20px;
 
         @media screen and (min-width: $desktop) {
             display: flex;
-            margin-top: 20px;
+            // margin-top: 20px;
         }
     }
 
@@ -129,6 +135,10 @@
 
     @media screen and (min-width: $tablet) {
         width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
     }
 
 

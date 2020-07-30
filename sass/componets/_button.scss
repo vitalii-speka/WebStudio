@@ -38,7 +38,9 @@
     display: flex;
     justify-content: center;
 
-    margin-top: 20px;
+    @media screen and (max-width: $tablet) {
+        margin-top: 20px;
+    }
 }
 
 .icon-send {

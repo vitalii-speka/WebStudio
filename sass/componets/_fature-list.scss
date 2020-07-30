@@ -11,8 +11,8 @@
         margin: 0;
         margin-bottom: 10px;
 
-        @media screen and (max-width: $mobile) {
-            text-align: center;
+        @media screen and (min-width: $desktop) {
+            text-align: left;
         }
 
     }
