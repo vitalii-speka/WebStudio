@@ -1001,10 +1001,19 @@ header a {
 
 .logo {
   color: #2196f3;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   font-style: normal;
   font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    color: #2196f3;
+    font-size: 26px;
+    line-height: 1.19;
+    font-style: normal;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1679,5 +1688,129 @@ label:focus-within textarea {
   background-size: contain;
   background-origin: border-box;
   cursor: pointer;
+}
+
+.footer {
+  background: #2f303a;
+  color: rgba(255, 255, 255, 0.4);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.box-1 {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .box-1 {
+    margin-right: 69px;
+  }
+  .box-1 .address-list {
+    width: 231px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box-1 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+
+.box-2 {
+  margin-right: 94px;
+}
+
+.box-2 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.address-list {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-top: 20px;
+}
+
+.address-list .text {
+  color: #ffffff;
+  margin-bottom: 9px;
+}
+
+.address-list .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-list .e-mail {
+  margin-bottom: 9px;
+}
+
+.address-list .telefone {
+  margin-bottom: 0;
+}
+
+.footer-text {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.box-3 .blok-bootom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.copirite {
+  color: #757575;
+  font-size: 12px;
+  line-height: 2;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding-top: 18px;
+  padding-bottom: 21px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.email-input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background: #2f303a;
+  width: 358px;
+  height: 50px;
+  margin-right: 18px;
+  padding: 15px 16px;
 }
 /*# sourceMappingURL=main.css.map */
