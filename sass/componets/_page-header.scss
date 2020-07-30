@@ -57,12 +57,13 @@ header a {
 
     // border: 1px solid #ececec;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
-    }
+    // @media screen and (min-width: $mobile) {
+    //     width: $mobile;
+    // }
 
     @media screen and (min-width: $tablet) {
         width: $tablet;
+        height: 80px;
 
         margin-left: auto;
         margin: auto;
@@ -219,6 +220,7 @@ header a {
 
         @media screen and (min-width: $tablet) {
             display: block;
+            padding-bottom: 32px;
         }
     }
 
@@ -272,9 +274,8 @@ header a {
 
 
     @media screen and (min-width: $tablet) {
-        width: $tablet;
 
-        display: flex;
+        // display: flex;
     }
 
 
@@ -288,8 +289,11 @@ header a {
         padding-bottom: 8px;
         @include text-style($title-text-color, 18px, 1.16);
 
-        // @media screen and (min-width: $tablet) {
-        // }
+        @media screen and (min-width: $tablet) {
+            padding: 0;
+            margin-top: 10px;
+
+        }
 
         @media screen and (min-width: $desktop) {
             padding-top: 32px;
@@ -298,12 +302,12 @@ header a {
 
 
         @media screen and (min-width: $tablet) {
-            @include text-style(currentColor, 12px, 1.16);
+            @include text-style($title-text-color, 12px, 1.16);
         }
 
         @media screen and (min-width: $desktop) {
             // width: $desktop;
-            @include text-style(currentColor, 14px, 1.14);
+            @include text-style($title-text-color, 14px, 1.14);
         }
 
 

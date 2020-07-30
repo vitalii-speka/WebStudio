@@ -13,10 +13,11 @@
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    // margin: 15px;
 
     @media screen and (min-width: $tablet) {
         display: flex;
-        text-align: center;
+        flex-wrap: wrap;
     }
 
 
@@ -42,11 +43,12 @@
     }
 
     & .team-li {
-        width: 450px;
+        // width: 450px;
 
 
         @media screen and (min-width: $tablet) {
-            width: calc((100% - 30px * 1) / 2);
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
         }
 
         @media screen and (min-width: $desktop) {
@@ -65,7 +67,9 @@
     }
 
     & .list-social:not(:last-child) {
-        margin-right: 10px;
+        @media screen and (min-width: $desktop) {
+            margin-right: 10px;
+        }
     }
 }
 
@@ -79,7 +83,10 @@
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-        margin-bottom: 30px;
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 30px;
+        }
+
     }
 
     &:not(:last-child) {
