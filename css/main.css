@@ -705,13 +705,19 @@ header a {
 }
 
 .button.primary {
+  text-align: center;
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 10px;
   vertical-align: bottom;
+}
+
+@media screen and (min-width: 1200px) {
+  .button.primary {
+    margin-right: 10px;
+  }
 }
 
 .foorm .button.primary {
@@ -722,6 +728,10 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
 }
 
 .icon-send {
@@ -1731,16 +1741,23 @@ label:focus-within textarea {
 }
 
 .box-2 {
-  margin-right: 94px;
+  min-width: 206px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .box-2 {
+    margin-right: 94px;
+  }
 }
 
 .box-2 .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 
@@ -1771,20 +1788,31 @@ label:focus-within textarea {
 }
 
 .footer-text {
+  display: block;
   color: #ffffff;
-  font-style: normal;
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
+  font-style: normal;
+  font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.box-3 {
+  margin-top: 60px;
 }
 
 .box-3 .blok-bootom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .box-3 .blok-bootom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+  }
 }
 
 .copirite {
@@ -1808,7 +1836,7 @@ label:focus-within textarea {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background: #2f303a;
-  width: 358px;
+  min-width: 450px;
   height: 50px;
   margin-right: 18px;
   padding: 15px 16px;
