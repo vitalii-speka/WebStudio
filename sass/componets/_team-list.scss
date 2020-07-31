@@ -43,10 +43,12 @@
     }
 
     & .team-li {
-        margin: 15px;
+        margin: 30px;
 
         @media screen and (min-width: $tablet) {
             width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+
         }
 
         @media screen and (min-width: $desktop) {
