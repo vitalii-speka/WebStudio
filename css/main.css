@@ -411,7 +411,7 @@ header a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-menu {
     position: absolute;
     z-index: 100;
@@ -425,7 +425,6 @@ header a {
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background: #FFFFFF;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
     padding-top: 60px;
@@ -503,7 +502,7 @@ header a {
   padding-top: 8px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .site-nav .link {
     display: inline-block;
     padding-top: 32px;
@@ -597,7 +596,7 @@ header a {
   border: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .address-contact {
     margin-top: 60px;
   }
@@ -636,10 +635,16 @@ header a {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 767px) {
   .auth-nav .item.telefone {
     margin-top: 16px;
     margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1200px) {
+  .auth-nav .item.telefone {
+    margin-top: 10px;
   }
 }
 
@@ -810,7 +815,7 @@ header a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   border: none;
   background-color: transparent;
 }
