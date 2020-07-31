@@ -636,6 +636,13 @@ header a {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .auth-nav .item.telefone {
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+}
+
 .auth-nav .item .link {
   color: #757575;
   display: -webkit-inline-box;
@@ -647,8 +654,6 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
   color: #757575;
   font-size: 18px;
   line-height: 1.16;
@@ -696,8 +701,8 @@ header a {
 .auth-nav .item .link:focus {
   color: #2196f3;
   --color5: currentColor;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.001);
+          transform: scale(1.001);
 }
 
 .button {

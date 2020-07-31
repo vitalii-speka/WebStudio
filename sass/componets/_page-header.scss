@@ -287,16 +287,20 @@ header a {
             }
         }
 
+        &.telefone {
+            @media screen and (max-width: $desktop) {
+                margin-top: 16px;
+                margin-left: 10px;
+            }
+        }
+
         & .link {
             color: $title-text-color;
             display: inline-flex;
             justify-content: center;
             align-items: center;
 
-            padding-top: 8px;
-            padding-bottom: 8px;
             @include text-style($title-text-color, 18px, 1.16);
-
 
 
             @media screen and (min-width: $desktop) {
@@ -335,6 +339,6 @@ header a {
         color: $accent-color;
         --color5: currentColor;
 
-        transform: scale(1.05);
+        transform: scale(1.001);
     }
 }
