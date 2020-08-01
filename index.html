@@ -141,19 +141,28 @@
         <ul class="what-list list">
           <li class="what-li">
             <a class="iteam-link" href="#">
-              <img src="./images/img-nout.jpg" alt="ноутбук" width="370" />
+              <img srcset="
+              ./images/what-doing/img-monitor-370.jpg 370w,
+              ./images/what-doing/img-monitor@2x.jpg 740w" src="./images/what-doing/img-monitor-370.jpg"
+                alt="десктопные приложения" sizes="(min-width: 1200px) 33.33vw" />
               <h3 class="title">десктопные приложения</h3>
             </a>
           </li>
           <li class="what-li">
             <a class="iteam-link" href="#">
-              <img src="./images/img-telefone.jpg" alt="мобильный телефон" width="370" />
+              <img srcset="
+              ./images/what-doing/img-telefone-370.jpg 370w,
+              ./images/what-doing/img-telefone@2x.jpg 740w" src="./images/what-doing/img-telefone-370.jpg"
+                alt="мобильные приложения" sizes="(min-width: 1200px) 33.33vw" />
               <h3 class="title">мобильные приложения</h3>
             </a>
           </li>
           <li class="what-li">
             <a class="iteam-link" href="#">
-              <img src="./images/img-monitor.jpg" alt="монитор" width="370" />
+              <img srcset="
+              ./images/what-doing/img-nout-370.jpg 370w,
+              ./images/what-doing/img-nout@2x.jpg 740w" src="./images/what-doing/img-nout-370.jpg"
+                alt="Дизайнерские решения" sizes="(min-width: 1200px) 33.33vw" />
               <h3 class="title">Дизайнерские решения</h3>
             </a>
           </li>
@@ -167,7 +176,22 @@
         <h2 class="section-title">Наша команда</h2>
         <ul class="team-list list">
           <li class="team-li">
-            <img src="./images/img-nikola-kucherenko.jpg" alt="фото Николай Кучеренко" width="270" />
+            <picture>
+              <source
+                srcset="./images/team/img-nikola-kucherenko-270.jpg 1x, ./images/team/img-nikola-kucherenko-270@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source
+                srcset="./images/team/img-nikola-kucherenko-354.jpg 1x, ./images/team/img-nikola-kucherenko-354@2x.jpg 2x"
+                media="(min-width: 768px)" />
+
+              <source
+                srcset="./images/team/img-nikola-kucherenko-450.jpg 1x, ./images/team/img-nikola-kucherenko-450@2x.jpg 2x"
+                media="(max-width: 767px)" />
+
+              <img src="./images/team/img-nikola-kucherenko-270.jpg" alt="фото Николай Кучеренко"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (max-width: 767px) 80vw" />
+            </picture>
             <h4 class="title">Николай Кучеренко</h4>
             <p class="text">Product Designer</p>
             <ul class="list">
@@ -203,7 +227,7 @@
           </li>
 
           <li class="team-li">
-            <img src="./images/img-olga-ivanova.jpg" alt="фото Ольга Иванова" width="270" />
+            <img src="./images/team/img-olga-ivanova-270.jpg" alt="фото Ольга Иванова" width="270" />
             <h4 class="title">Ольга Иванова</h4>
             <p class="text">Frontend Develope</p>
             <ul class="list">
@@ -239,7 +263,7 @@
           </li>
 
           <li class="team-li">
-            <img src="./images/img-andrei-shev4enko.jpg" alt="фото Андрей Шевченко" width="270" />
+            <img src="./images/team/img-andrei-shev4enko-270.jpg" alt="фото Андрей Шевченко" width="270" />
             <h4 class="title">Андрей Шевченко</h4>
             <p class="text">Marketing</p>
             <ul class="list">
@@ -275,7 +299,7 @@
           </li>
 
           <li class="team-li">
-            <img src="./images/img-ivan-nikolajev.jpg" alt="фото Иван Николаев" width="270" />
+            <img src="./images/team/img-ivan-nikolajev-270.jpg" alt="фото Иван Николаев" width="270" />
             <h4 class="title">Иван Николаев</h4>
             <p class="text">UI Designer</p>
             <ul class="list">

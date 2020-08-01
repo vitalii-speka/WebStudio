@@ -275,10 +275,18 @@ header a {
                 margin-left: 10px;
             }
 
-            @media screen and (min-width: $tablet),
-            screen and (max-width: $desktop) {
+            @media screen and (min-width: $tablet) and (max-width: 1199px) {
                 margin-top: 10px;
             }
+
+            // @media screen and (min-width: $tablet) {
+            //     margin-top: 10px;
+            // }
+
+            // @media screen and (min-width: $desktop) {
+            //     margin-top: 0;
+            // }
+
         }
 
         & .link {
