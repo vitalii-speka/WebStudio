@@ -17,7 +17,6 @@ main {
 }
 
 .section-title {
-
     @include text-style($primary-text-color, 28px, 1.18);
 
     font-weight: $font-weight-700;
@@ -28,9 +27,7 @@ main {
     @media screen and (min-width: $desktop) {
         @include text-style($primary-text-color, 36px, 1.16);
         margin-bottom: 50px;
-
     }
-
 }
 
 .container-fatures .section-title {

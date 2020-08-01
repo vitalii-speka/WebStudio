@@ -27,7 +27,6 @@
     & .item {
         width: 450px;
 
-
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -40,17 +39,11 @@
             width: calc((100% - 30px * 3) / 4);
         }
     }
-
-
 }
 
 .icon-fature {
     & .blok {
         @include FlexCentr();
-
-        // @media screen and (max-width: $mobile) {
-        //     width: 270px;
-        // }
 
         height: 120px;
         background-color: #f5f4fa;
@@ -58,12 +51,10 @@
         background-position: center;
         margin-bottom: 30px;
 
-
     }
 
     & .icon {
         width: 70px;
         height: 70px;
     }
-
 }

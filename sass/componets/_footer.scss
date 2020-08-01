@@ -6,12 +6,7 @@
 }
 
 .footer-info {
-    @media screen and (min-width: $mobile) {
-        // width: $mobile;
-    }
-
     @media screen and (max-width: $desktop) {
-        // width: $tablet;
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
@@ -44,15 +39,9 @@
 }
 
 .box-2 {
-
     @media screen and (max-width: $tablet) {
         min-width: 300px;
         margin-top: 60px;
-    }
-
-
-    @media screen and (min-width: $desktop) {
-        // margin-right: 94px;
     }
 
     & .list {
@@ -117,16 +106,13 @@
         width: 450px;
     }
 
-
     .blok-bootom {
         padding-top: 20px;
 
         @media screen and (min-width: $desktop) {
             display: flex;
-            // margin-top: 20px;
         }
     }
-
 }
 
 .email-input {
@@ -139,7 +125,6 @@
     background: #2f303a;
     width: 100%;
     height: 50px;
-    // margin-right: 18px;
     padding: 15px 16px;
 
     @media screen and (min-width: $tablet) {
@@ -149,6 +134,4 @@
     @media screen and (min-width: $desktop) {
         width: 358px;
     }
-
-
 }

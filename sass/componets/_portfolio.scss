@@ -6,12 +6,15 @@
 .filters-list {
     display: flex;
     flex-wrap: wrap;
-
+    margin: -4px;
 
     @media screen and (min-width: $tablet) {
         justify-content: center;
     }
 
+    & .filters-li {
+        margin: 4px;
+    }
 
 
     & .title {
@@ -38,9 +41,9 @@
     }
 }
 
-.filters-li:not(:last-child) {
-    margin-right: 8px;
-}
+// .filters-li:not(:last-child) {
+//     margin-right: 8px;
+// }
 
 .filters-li .title {
     border: none;
@@ -49,7 +52,7 @@
 .work-list {
     margin: -15px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $max-mobile) {
         margin-top: 30px;
     }
 
@@ -63,15 +66,11 @@
         margin-top: 50px;
     }
 
-
-
-
     & .item {
         border: 1px solid #eeeeee;
         box-sizing: border-box;
         margin: 15px;
         justify-content: center;
-
 
         @media screen and (min-width: $tablet) {
             width: calc((100% - 4 * 15px) / 2);
@@ -80,8 +79,6 @@
         @media screen and (min-width: $desktop) {
             width: calc((100% - 6 * 15px) / 3);
         }
-
-
     }
 
     & .item:nth-child(3n) {
@@ -91,9 +88,6 @@
     & .item:nth-last-child(-n + 3) {
         margin-bottom: 0;
     }
-
-    // width: calc((100% - 4 * 15px) / 2);
-
 
     & .card-img {
         display: block;
@@ -150,13 +144,11 @@
     transform: translateY(0);
 }
 
-
 .item.link-hover {
     transition: translate3d $hover-animation;
 }
 
 .item.link-hover:hover,
 .item.link-hover:focus {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        0px 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
