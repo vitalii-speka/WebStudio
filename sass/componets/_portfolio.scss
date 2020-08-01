@@ -5,8 +5,14 @@
 
 .filters-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
+
+
 
     & .title {
         @include text-style($primary-text-color, 16px, 1.62);
@@ -41,16 +47,39 @@
 }
 
 .work-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: -15px;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 50px;
+    }
+
+
+
 
     & .item {
-        width: calc((100% - 60px) / 3);
-        margin-right: 30px;
-        margin-bottom: 30px;
         border: 1px solid #eeeeee;
         box-sizing: border-box;
+        margin: 15px;
+        justify-content: center;
+
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 6 * 15px) / 3);
+        }
 
 
     }
@@ -124,12 +153,10 @@
 
 .item.link-hover {
     transition: translate3d $hover-animation;
-    // transform: translate3d(0px, 0px, 0px);
 }
 
 .item.link-hover:hover,
 .item.link-hover:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
         0px 1px 1px rgba(0, 0, 0, 0.12);
-    // transform: translate3d(3px, 3px, 3px);
 }

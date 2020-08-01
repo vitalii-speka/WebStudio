@@ -278,14 +278,9 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-}
-
-@media screen and (min-width: 1200px) {
-  img {
-    display: block;
-  }
 }
 
 .container {
@@ -572,7 +567,7 @@ header a {
   border-radius: 2px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .site-nav .item:not(:first-child) {
     margin-top: 40px;
   }
@@ -1151,10 +1146,16 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .filters-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .filters-list .title {
@@ -1191,23 +1192,52 @@ header a {
 }
 
 .work-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .work-list {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work-list {
+    margin-top: 50px;
+  }
 }
 
 .work-list .item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
   border: 1px solid #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .work-list .item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work-list .item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
 }
 
 .work-list .item:nth-child(3n) {
